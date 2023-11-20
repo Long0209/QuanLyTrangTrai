@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 
 // import component and Pages
 import {DefaultLayout, LoginPage} from '@/Components';
-import {Home, News, PageError } from '@/Pages';
+import {Home, News, Test, PageError } from '@/Pages';
 
 function App() {
     return (
@@ -15,6 +15,8 @@ function App() {
                     <Route index element={<Home/>}/>
                     <Route path='home' element={<Home/>}/>
                     <Route path='news' element={<News/>}/>
+
+                    <Route path='test' element={<Test/>}/>
                     {/* <Route path='infomaitons' element={<Infomations/>}/> */}
                     <Route path='login' element={<LoginPage/>}/>
                     {/* Page error */}
