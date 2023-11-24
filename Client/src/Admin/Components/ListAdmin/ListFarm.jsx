@@ -1,10 +1,10 @@
 
 import React from 'react';
 
-function FarmList() {
+function ListFarm() {
     return (
         <div>FarmList</div>
     )
 }
 
-export default FarmList;
+export default ListFarm;
