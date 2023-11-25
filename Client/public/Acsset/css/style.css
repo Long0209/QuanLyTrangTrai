@@ -1,0 +1,11 @@
+
+.image-page-error{
+    background-image: url('../../BG_I/imagePageError.jpg');
+    background-attachment: fixed;
+    width: 90%;
+    height: auto;
+}
+
+.header-default{
+    
+}
