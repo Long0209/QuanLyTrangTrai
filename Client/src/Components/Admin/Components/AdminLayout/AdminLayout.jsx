@@ -1,5 +1,6 @@
 
 import React, {Fragment} from 'react';
+import { Link } from 'react-router-dom';
 
 
 function AdminLayout() {
@@ -43,17 +44,17 @@ function AdminLayout() {
                 <div className='absolute bottom-0'>
                     {/* Sing Admin */}
                     <div className='w-full'>
-                        <a class="block text-gray-500 py-2.5 ps-4 my-2 rounded transition duration-200 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-cyan-500 hover:text-white mt-auto" 
+                        <Link class="block text-gray-500 py-2.5 ps-4 my-2 rounded transition duration-200 cursor-pointer" 
                             target="_blank">
                             <i class="fas fa-sign-out-alt mr-2"></i>
                             Đăng Xuất  
-                        </a>
+                        </Link>
                     </div>
 
                     {/* <!-- Copyright al final de la navegación lateral --> */}
                     <div>
                         <p class="mb-1 px-5 py-3 text-sm text-slate-500 bg-clip-text bg-gradient-to-r from-fuchsia-500 to-red-500">
-                            <span className='block text-transparent '> Hiển Thị Thời Gian</span>
+                            <span className='block text-transparent select-none'> Hiển Thị Thời Gian</span>
                         </p>
                     </div>
                 </div>

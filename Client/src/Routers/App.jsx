@@ -21,7 +21,7 @@ import {
     ListAccount, 
     ListFarm, 
     AdminHome 
-} from '@/Admin';
+} from '@/Components/Admin';
 
 
 function App() {

@@ -94,15 +94,14 @@ function UserDropDowm() {
                             <form method="POST" action="#">
                                 <Menu.Item>
                                     {({ active }) => (
-                                    <button
-                                        type="submit"
+                                    <Link
                                         className={classNamed(
                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                         'block w-full px-4 py-2 text-left text-sm'
                                         )}
                                     >
-                                        Sign out
-                                    </button>
+                                        <button>Sign out</button>
+                                    </Link>
                                     )}
                                 </Menu.Item>
                             </form>
