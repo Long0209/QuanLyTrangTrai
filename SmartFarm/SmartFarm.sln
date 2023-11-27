@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartFarm.Data", "SmartFarm.Data\SmartFarm.Data.csproj", "{1686AA4E-F7E6-4285-8E40-22571242E3A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartFarm.API", "SmartFarm.API\SmartFarm.API.csproj", "{645163AB-4435-4EEB-A1D6-1AE8724DAE33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1686AA4E-F7E6-4285-8E40-22571242E3A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1686AA4E-F7E6-4285-8E40-22571242E3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1686AA4E-F7E6-4285-8E40-22571242E3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1686AA4E-F7E6-4285-8E40-22571242E3A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{645163AB-4435-4EEB-A1D6-1AE8724DAE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645163AB-4435-4EEB-A1D6-1AE8724DAE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645163AB-4435-4EEB-A1D6-1AE8724DAE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645163AB-4435-4EEB-A1D6-1AE8724DAE33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
