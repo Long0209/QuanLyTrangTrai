@@ -1,7 +1,7 @@
 [
-{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
-{"type":"database","name":"id18812339_data"},
-{"type":"table","name":"espdata","database":"id18812339_data","data":
+    {"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+    {"type":"database","name":"id18812339_data"},
+    {"type":"table","name":"espdata","database":"id18812339_data","data":
 [
 {"id":"1","temp":"301","hum":"586","probe":"0","charge":"859","device":"1","TimeStamp":"2023-05-07 13:16:06"},
 {"id":"2","temp":"301","hum":"586","probe":"0","charge":"859","device":"1","TimeStamp":"2023-05-07 13:16:16"},
