@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 // import use Icons-react
 import { TiTree } from "react-icons/ti";
@@ -8,6 +8,13 @@ import { CiSettings } from "react-icons/ci";
 import { FaOutdent } from "react-icons/fa";
 import { GoContainer } from "react-icons/go";
 import { FcComboChart } from "react-icons/fc";
+
+// import button user
+import { Button_1, Chart_1 } from "@/Components"
+
+// 
+import { FormSignAccount } from "../../";
+import { GetWeather } from "@/Api/GetApiData";
 
 
 // list none 
@@ -154,9 +161,15 @@ function AdminMasterPages() {
             </aside>
 
             {/* content page Layout */}
-            <div className="p-4 sm:ml-64">
+            <div className="mt-14 p-4 sm:ml-64">
+                <div className="text-sm">
+                    {/* <Button_1/> */}
+                    {/* <FormSignAccount/> */}
+                    {/* <Chart_1/> */}
+                    <GetWeather/>
+                </div>
 
-                {/* 
+                {/*                 
                     <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
                         <div className="grid grid-cols-3 gap-4 mb-4">
                             <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">

@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "axios": "^1.6.2",
     "chart.js": "^4.4.0",
     "flowbite": "^2.2.0",
     "flowbite-react": "^0.6.4",
