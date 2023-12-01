@@ -1,14 +1,6 @@
 
+// Master and Pages Layout Admin interface
+export * from './Components/Shared';
 
-export {default as AdminManagePages} from './AdminManagePages';
-// 
-// 
-export { default as AdminLayout } from './Components/AdminLayout/AdminLayout.jsx'; 
-
-// List
-export { default as ListFarm } from './Components/ListAdmin/ListFarm.jsx'; 
-export { default as ListAccount } from './Components/ListAdmin/ListAccount.jsx'; 
-
-// pages Admin
-
-export { default as AdminHome } from './Pages/AdminHome.jsx';
+// Items Pages Layout Functions Amdin interface
+export { default as AdminHome } from './Pages/Home/AdminHome.jsx';

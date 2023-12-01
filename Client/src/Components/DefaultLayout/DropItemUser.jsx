@@ -2,15 +2,17 @@
 import React, {Fragment } from 'react';
 // icons user login
 
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Menu, Transition } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Link } from 'react-router-dom';
 
+
+// 
 function classNamed(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-function UserDropDowm() {
+function DropItemUser() {
     return (
         <>
             <Menu as="div" className="relative inline-block text-left">
@@ -108,9 +110,9 @@ function UserDropDowm() {
                         </div>
                     </Menu.Items>
                 </Transition>
-                </Menu>
+            </Menu>
         </>
     )
 }
 
-export default UserDropDowm
+export default DropItemUser;

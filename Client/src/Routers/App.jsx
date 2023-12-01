@@ -3,11 +3,13 @@ import React from 'react' ;
 import {Routes, Route} from 'react-router-dom';
 
 // import component and Pages
-import {DefaultLayout, LoginPages} from '@/Components';
+import {
+    DefaultLayout, 
+    LoginPages
+} from '@/Components';
 
 // Default Pages
 import {
-    Home, 
     Home2, 
     News, 
     Support, 
@@ -17,10 +19,8 @@ import {
 
 // admin
 import { 
-    AdminManagePages,
-    ListAccount, 
-    ListFarm, 
-    AdminHome 
+    AdminMasterPages,
+    AdminHome
 } from '@/Pages/Private/Admin';
 
 
@@ -45,10 +45,8 @@ function App() {
                 </Route>
 
                 {/* Router Admin */}
-                <Route path='Admin' element={ <AdminManagePages/> }>
+                <Route path='Admin' element={ <AdminMasterPages/> }>
                     <Route index element={ <AdminHome/> }/>
-                    <Route path='listAccount' element={ <ListAccount/> } />
-                    <Route path='listFarm' element={ <ListFarm/> } />
 
                     {/* Page error */}
                     <Route path='*' element={<PageError/>}/>

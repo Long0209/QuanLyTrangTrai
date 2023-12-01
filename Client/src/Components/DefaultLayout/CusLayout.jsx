@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 // icons
 import {GoPersonAdd } from 'react-icons/go';
 // import pages in components
-import UserDropDowm from './UserDropDowm';
+import DropItemUser from './DropItemUser.jsx';
 
 
 
@@ -14,6 +14,7 @@ function CusLayout() {
         <>
             <nav className="bg-slate-700 border-gray-200 dark:bg-gray-900 ">
                 <div className="max-w-screen flex flex-wrap items-center lg:justify-between mx-auto p-4">
+                    
                     <div className="left-items flex flex-wrap items-center">
                         {/* icons logo link */}
                         <NavLink to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -79,7 +80,7 @@ function CusLayout() {
                     </div>
                     {/* user Drop-items */}
                     <div className="user dropdows-user-items ">
-                        <UserDropDowm/>
+                        <DropItemUser/>
                     </div>
                 </div>
             </nav>
