@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using SmartFarm.Data.Entities;
 using SmartFarm.API.Models.Identity;
 using System.Security.Claims;
+using System.ComponentModel.DataAnnotations;
 
 namespace SmartFarm.API.Controllers;
 
@@ -62,10 +63,29 @@ public class AuthenticationController : ControllerBase {
     [Route("sign-in")]
     public async Task<IActionResult> SignIn([FromBody] SignInViewModel signInViewModel) {
         if (ModelState.IsValid) {
-            var user = await _userManager.FindByEmailAsync(signInViewModel.Email);
-            if(user == null) {
-                return BadRequest(new {Error = "Email or password wrong"});
+            var user = new User();
+
+            var phoneAttribute = new PhoneAttribute();
+            var emailAddressAttribute = new EmailAddressAttribute();
+            // check if user sign in by email
+            if(emailAddressAttribute.IsValid(signInViewModel.EmailOrUserName)) {
+                user = await _userManager.FindByEmailAsync(signInViewModel.EmailOrUserName);
+            } 
+            // check if user sign in by phone number 
+            else if(phoneAttribute.IsValid(signInViewModel.EmailOrUserName)) {
+                user = await _userManager.Users
+                    .Where(p => p.PhoneNumber == signInViewModel.EmailOrUserName)
+                    .FirstOrDefaultAsync();
             }
+            // if user sign in by user name
+            else {
+                user = await _userManager.FindByNameAsync(signInViewModel.EmailOrUserName);
+            }
+
+            if(user == null) {
+                return BadRequest(new {Error = "Username or password wrong"});
+            }
+
             var result = await _signInManager.PasswordSignInAsync(
                 user,
                 signInViewModel.Password,
