@@ -11,4 +11,6 @@ public class EspDevice {
     public string UserId {get; set;}
     public string Name {get; set;}
     public string Location {get; set;}
+    [ForeignKey("Farm.Id")]
+    public int FarmId {get; set;}
 }

@@ -14,7 +14,7 @@ public class SmartFarmDbContext : IdentityDbContext<User,Role,string> {
     
     public DbSet<EspData> EspData {get; set;}
     public DbSet<EspDevice> EspDevices {get; set;}
-    
+    public DbSet<Farm> Farms {get; set;}
     protected override void OnModelCreating(ModelBuilder builder) {
         base.OnModelCreating(builder);
         
