@@ -3,7 +3,9 @@ import React from 'react'
 
 function Support() {
     return (
-        <div>Support</div>
+        <div className='text-xl text-center'>
+            Đang Cập Nhật Hỗi Trợ
+        </div>
     )
 }
 

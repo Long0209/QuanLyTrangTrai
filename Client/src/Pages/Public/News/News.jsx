@@ -3,7 +3,9 @@ import React from 'react'
 
 function News() {
     return (
-        <div>News</div>
+        <div className='text-xl text-center'> 
+            Đang Cập Nhật Trang Tin Tức
+        </div>
     )
 }
 

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 // import use Icons-react
 import { TiTree } from "react-icons/ti";
@@ -14,7 +14,8 @@ import { Button_1, Chart_1 } from "@/Components"
 
 // 
 import { FormSignAccount } from "../../";
-import { GetWeather } from "@/Api/GetApiData";
+import {GetEspData} from "@/Api";
+import { Home, Home2 } from "@/Pages";
 
 
 // list none 
@@ -27,11 +28,11 @@ const LinkListAdmin = [
 
 // dashboarditems
 const DashboardItems = [
-    {name:"FarmHome", href:"#", icons:GoContainer},
-    {name:"FarmTree", href:"#", icons:TiTree},
-    {name:"Chat.js", href:"#", icons:FcComboChart},
-    {name:"SignOut", href:"#", icons:FaOutdent},
-    {name:"Setting", href:"#", icons:CiSettings}
+    {name:"FarmHome", href:"Home", icons:GoContainer  },
+    {name:"FarmTree", href:"Home", icons:TiTree },
+    {name:"Chat.js", href:"Chart_1", icons:FcComboChart },
+    {name:"SignOut", href:"Home2", icons:FaOutdent },
+    {name:"Setting", href:"GetEspData", icons:CiSettings}
 ]
 
 function AdminMasterPages() {
@@ -164,9 +165,11 @@ function AdminMasterPages() {
             <div className="mt-14 p-4 sm:ml-64">
                 <div className="text-sm">
                     {/* <Button_1/> */}
-                    {/* <FormSignAccount/> */}
-                    {/* <Chart_1/> */}
-                    <GetWeather/>
+                    <Outlet/>
+
+                    {/* <FormSignAccount/>
+                    <Chart_1/>
+                    <GetEspData/> */}
                 </div>
 
                 {/*                 

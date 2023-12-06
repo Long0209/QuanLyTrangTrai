@@ -23,6 +23,9 @@ import {
     AdminHome
 } from '@/Pages/Private/Admin';
 
+import { Button_1, Chart_1 } from "@/Components"
+import {GetEspData} from "@/Api";
+
 
 function App() {
     return (
@@ -47,6 +50,10 @@ function App() {
                 {/* Router Admin */}
                 <Route path='Admin' element={ <AdminMasterPages/> }>
                     <Route index element={ <AdminHome/> }/>
+                    <Route path='Chart_1' element={ <Chart_1/> }/>
+                    <Route path='Home' element={ <AdminHome/> }/>
+                    <Route path='Home2' element={ <Home2/> }/>
+                    <Route path='GetEspData' element={ <GetEspData/> }/>
 
                     {/* Page error */}
                     <Route path='*' element={<PageError/>}/>

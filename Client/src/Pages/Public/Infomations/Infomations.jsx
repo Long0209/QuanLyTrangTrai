@@ -3,7 +3,9 @@ import React from 'react'
 
 function Infomations() {
     return (
-        <div>Infomations</div>
+        <div className='text-xl text-center'> 
+            Đang Cập Nhật Trang Thông Tin 
+        </div>
     )
 }
 
