@@ -7,6 +7,7 @@ using SmartFarm.API.Models.EspDevices;
 using Microsoft.EntityFrameworkCore;
 using SmartFarm.API.Extensions.PagedList;
 using AutoMapper;
+using SmartFarm.API.Extensions.PagedList.Models;
 
 namespace SmartFarm.API.Areas.Admin.Controller;
 

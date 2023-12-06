@@ -1,4 +1,4 @@
-namespace SmartFarm.API.Models;
+namespace SmartFarm.API.Extensions.PagedList.Models;
 
 public class PagedListViewModel<dataType> {
     public PagedListViewModel() {

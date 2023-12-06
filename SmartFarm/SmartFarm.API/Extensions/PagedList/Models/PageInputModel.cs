@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace SmartFarm.API.Models;
+namespace SmartFarm.API.Extensions.PagedList.Models;
 
 public class PageInputModel {
     [DefaultValue(1)]
