@@ -49,8 +49,19 @@ builder.Services.Configure<IdentityOptions> (options => {
     options.SignIn.RequireConfirmedPhoneNumber = false;   
 });
 
+// AddCors to services 
+builder.Services.AddCors(options => {
+    options.AddPolicy("Default", builder => {
+            builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+}); 
+
 //Add auto mapper to services 
 builder.Services.AddAutoMapper(typeof(SmartFarm.API.Extensions.AutoMapper.AutoMapperConfig));
+
 
 var app = builder.Build();
 
@@ -66,5 +77,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("Default");
 
 app.Run();
