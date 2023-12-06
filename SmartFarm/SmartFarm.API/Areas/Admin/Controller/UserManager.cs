@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SmartFarm.API.Extensions.PagedList;
+using SmartFarm.API.Extensions.PagedList.Models;
 using SmartFarm.API.Models;
 using SmartFarm.API.Models.Identity;
 using SmartFarm.Data;
