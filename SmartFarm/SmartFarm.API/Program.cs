@@ -47,6 +47,15 @@ builder.Services.Configure<IdentityOptions> (options => {
     options.SignIn.RequireConfirmedPhoneNumber = false;   
 });
 
+// AddCors to services 
+builder.Services.AddCors(options => {
+    options.AddPolicy("Default", builder => {
+            builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+}); 
 
 var app = builder.Build();
 
@@ -62,5 +71,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("Default");
 
 app.Run();
