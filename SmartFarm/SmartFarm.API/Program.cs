@@ -3,6 +3,8 @@ using SmartFarm.Data.Entities;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using AutoMapper;
+using SmartFarm.API.Extensions.AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,6 +58,10 @@ builder.Services.AddCors(options => {
                 .AllowAnyHeader();
         });
 }); 
+
+//Add auto mapper to services 
+builder.Services.AddAutoMapper(typeof(SmartFarm.API.Extensions.AutoMapper.AutoMapperConfig));
+
 
 var app = builder.Build();
 
