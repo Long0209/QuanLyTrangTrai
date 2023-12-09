@@ -6,11 +6,6 @@
 
 }
 
-
-body{
-    overflow-x: hidden;
-}
-
 .nav-menu > li > .active{
     color: white;
 
@@ -35,6 +30,31 @@ body{
 
 }
 /* custorm text auto run */
+
+/* scrollbat-body */
+
+
+
+::-webkit-scrollbar{
+    width: 2px;
+    overflow-y: auto;
+    border-radius: 50px;
+
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 120px;
+    background: rgba(225, 225, 225, 0.607);
+
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(180deg, rgb(72, 145, 181), rgb(105, 103, 173), rgb(83, 198, 140));
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 120px;
+
+}
+
 
 
 

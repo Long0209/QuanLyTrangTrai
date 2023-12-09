@@ -3,16 +3,17 @@ import {Routes, Route } from "react-router-dom";
 
 // Nạp Các Thành Phần con 
 // Thành Phần Tĩnh
-import {Navbar, NoPages} from "@/Components";
+import {Navbar, NoPages, ChartTest } from "@/Components";
 
 // Thành Phần Động
-import { Home, News, Infomations, Support } from "@/Pages/Public";
+import { Home, News, Support } from "@/Pages/Public";
 
 // import Layout Admin interface
 // import { Layout } from "private/"
 // câu lệnh bỏ qua lỗi không tìm thấy thành dù thành phần vẫn được nập vào và hiện thị 
 // @ts-ignore 
 import Admin from "@private/Admin.tsx";
+
 // @ts-ignore
 import { AdminLayout } from "@private/Admin/Components";
 
@@ -30,7 +31,7 @@ function Router() {
                     <Route index element={<Home/>} />
                     <Route path="news" element={<News/>} />
                     <Route path="support" element={<Support/>} />
-                    <Route path="infomations" element={<Infomations/>} />
+                    <Route path="infomations" element={<ChartTest/>} />
     
                     {/* Không tìm Thấy Trang Theo URL( / ) */}
                     <Route path="*" element={<NoPages/>} />
