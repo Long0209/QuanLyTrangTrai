@@ -1,0 +1,40 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+.nav-menu > li > .active{
+    color: white;
+
+}
+
+/* custorm text auto run */
+.marquee-container-45s {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee-animation 45s linear infinite;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding: 10px; /* Optional: Add padding for better visibility */
+}
+
+@keyframes marquee-animation {
+    0% { transform: translateX(100%); }
+
+    100% { transform: translateX(-100%); }
+
+}
+/* custorm text auto run */
+
+
+
