@@ -1,2 +1,2 @@
 
-export {default as AdminLayout} from "./Shared/AdminLayout.tsx"; 
+export {default as MasterAdminLayout} from "./Shared/MasterAdminLayout.tsx"; 

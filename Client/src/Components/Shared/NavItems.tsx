@@ -2,7 +2,6 @@
 import { Link, NavLink } from "react-router-dom";
 import iconRe from '../../assets/react.svg';
 
-import { TiThMenu } from "react-icons/ti";
 
 
 const itemLinks = [
@@ -15,7 +14,7 @@ const itemLinks = [
 const ItemUser = [
     {name: "Đăng Xuất", href:"#"},
     {name: "Đăng Nhập", href:"#"},
-    {name: "Thông Tin Chung", href:"#"},
+    {name: "Thông Tin Chung", href:"Admin"},
 ]
 
 

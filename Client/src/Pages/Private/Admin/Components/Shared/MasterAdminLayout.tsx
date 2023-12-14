@@ -13,20 +13,20 @@ import { FcComboChart } from "react-icons/fc";
 import icons_1 from "@/assets/Images/icons_12.jpg";
 
 // links-List_Items
-const LinkListAdmin = [
-    {name:"Trang_1", href:"#", role:"menuitem"},
-    {name:"Trang_2", href:"#", role:"menuitem"},
-    {name:"Trang_2", href:"#", role:"menuitem"},
-    {name:"Trang_2", href:"#", role:"menuitem"},
-]
+// const LinkListAdmin = [
+//     {name:"Trang_1", href:"#", role:"menuitem"},
+//     {name:"Trang_2", href:"#", role:"menuitem"},
+//     {name:"Trang_2", href:"#", role:"menuitem"},
+//     {name:"Trang_2", href:"#", role:"menuitem"},
+// ]
 
 // Dashboard-Items
 const DashboardItems = [
-    {name:"FarmHome", href:"Home", icons:GoContainer  },
-    {name:"FarmTree", href:"Home", icons:TiTree },
-    {name:"Chat.js", href:"Chart_1", icons:FcComboChart },
-    {name:"SignOut", href:"Home2", icons:FaOutdent },
-    {name:"Setting", href:"GetEspData", icons:CiSettings}
+    {name:"Trang Chủ", href:"home", icons:GoContainer  },
+    {name:"Nhà Trồng", href:"home_1", icons:TiTree },
+    {name:"Thống Kê Chi Tiết", href:"home_2", icons:FcComboChart },
+    {name:"Cài Đặt", href:"Setting", icons:CiSettings },
+    {name:"Thoát", href:"Out", icons:FaOutdent}
 ]
 
 // thanh tiêu đề, thanh phía trên
@@ -35,8 +35,9 @@ function NavBar_Top() {
     return (
         // default
         <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+            {/* container-top */}
             <div className="px-3 py-3 lg:px-5 lg:pl-3">
-                {/*  */}
+                {/* conatiner-2-top */}
                 <div className="flex items-center justify-between">
                     {/* user -icons  */}
                     <div className="flex items-center justify-start rtl:justify-end">  
@@ -80,48 +81,40 @@ function NavBar_Top() {
                     {/* default-user */}
                     <div className="flex items-center">
                         <div className="flex items-center ms-3">
-
                             <div>
-                                <button type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                                <div  className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" 
+                                    // aria-expanded="false" 
+                                    // data-dropdown-toggle="dropdown-user"
+                                >
                                     <span className="sr-only"> Open Menu User </span>
                                     <img className="w-8 h-8 rounded-full" src={icons_1} alt="user photo"/>
-                                </button>
+                                </div>
                             </div>
 
                             {/* items-user-drop */}
-                            <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" 
-                                id="dropdown-user"
-                            >
-                                <div className="px-4 py-3" 
-                                    role="none">
-                                    <p className="text-sm text-gray-900 dark:text-white" 
-                                        role="none">
-                                        Neil Sims
-                                    </p>
-                                    <p className="text-sm font-medium text-gray-900 truncate dark:text-gray-300" 
-                                        role="none">
-                                        neil.sims@flowbite.com
-                                    </p>
-                                </div>
-
-                                {/*  items title dashboard */}
-                                <ul className="py-1" role="none">
-                                    {
-                                        LinkListAdmin.map( (item, index) => {
-                                            return (
-                                                <li key={index}>
-                                                    <Link to={item.href} 
-                                                        role={item.role} 
-                                                        className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'
-                                                    >
-                                                        {item.name}
-                                                    </Link>
-                                                </li>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                            </div>
+                            {/*
+                                <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" 
+                                    id="dropdown-user"
+                                >
+                                    {/*  items title dashboard *
+                                    <ul className="py-1" role="none">
+                                        {
+                                            LinkListAdmin.map( (item, index) => {
+                                                return (
+                                                    <li key={index}>
+                                                        <Link to={item.href} 
+                                                            role={item.role} 
+                                                            className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'
+                                                        >
+                                                            {item.name}
+                                                        </Link>
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </div> 
+                            */}
                         </div>
                     </div>
                 </div>
@@ -294,7 +287,7 @@ function Content_Main () {
 }
 
 // Master Layout Administration
-export default function AdminLayout() {
+export default function MasterAdminLayout() {
 
     return (
         <>
