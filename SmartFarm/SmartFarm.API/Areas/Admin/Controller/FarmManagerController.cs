@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SmartFarm.API.Extensions.PagedList.Models;
 using SmartFarm.API.Models;
 using SmartFarm.API.Models.Farm;
 using SmartFarm.Data;
