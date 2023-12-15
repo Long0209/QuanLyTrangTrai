@@ -11,6 +11,7 @@ import { FcComboChart } from "react-icons/fc";
 
 // 
 import icons_1 from "@/assets/Images/icons_12.jpg";
+import icons_2 from "@/assets/react.svg";
 
 // links-List_Items
 // const LinkListAdmin = [
@@ -65,10 +66,11 @@ function NavBar_Top() {
                         </button>
 
                         {/* link items change icons and link become your own  */}
-                        <a href="https://flowbite.com" 
+                        <a href="#" 
                             className="flex ms-2 md:me-24"
                         >
-                            <img src="https://flowbite.com/docs/images/logo.svg" 
+                            {/* images logos */}
+                            <img src={icons_2} 
                                 className="h-8 me-3" 
                                 alt="FlowBite Logo"
                             />

@@ -1,39 +1,17 @@
 
 // 
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
+// improt fuctions get date time 
+import { GetTimes, GetDates } from "@/Components/Time/ShowDateTime";
 // tao fun son loading dong ho
 function HomeAdmin() {
-    const [currentTime, setCurrentTime] = useState(new Date());
-
-    
-    useEffect( () => {
-        const intervalId = setInterval( () => { 
-            setCurrentTime( new Date() )
-
-        }, 1000) 
-
-        // Cleanup the interval when the component is unmounted
-        return () => clearInterval(intervalId);
-
-    }, [])
-
-    // Empty dependency array to run the effect only once on mount
-    const formattedTime = currentTime.toLocaleTimeString();
-
-    const xday = currentTime.getDay().toString();
-    const xmon = currentTime.getMonth().toLocaleString();
-
-    // run index functions
     return (
         <>
-            Admin - Home - Time:{formattedTime}
-            <br />
-            day - {xday}
-            <br />
-            mon - {xmon}
+            <span> get times:  <GetTimes/> </span>
+            <span> get Dates: <br /> <GetDates/> </span>
         </>
-    );
+    )
 }
 
 
