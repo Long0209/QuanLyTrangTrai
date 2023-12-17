@@ -7,13 +7,16 @@ import { useState, useEffect } from "react";
 function GetTimes() {
     const [time, setTimes] = useState(new Date());
 
+    const loopTimes = 1000; // gia tri cong lap thoi gian don vi ( ms )
+
+    // vong lap thoi gian
     useEffect( () => {
         const intervalId = setInterval( () => { 
             setTimes( new Date() )
             
             // hien thi kiem tra thong tin thoi gian dang chay la
             // console.log(time);
-        }, 1000) 
+        }, loopTimes) 
 
         // Cleanup the interval when the component is unmounted
         return () => clearInterval(intervalId);
@@ -26,7 +29,7 @@ function GetTimes() {
     // run index functions
     return (
         <div className="get-Time inline">
-            <span className="showTime"> Time:{formatTime} </span><br />
+            <span className="showTime">{formatTime} </span><br />
         </div>
     );
 }
@@ -36,6 +39,8 @@ function GetDates() {
     const [date, setDate] = useState(new Date());
     const today = new Date();
 
+    const loopTimes = 3600000; // gia tri cong lap thoi gian don vi ( ms )
+    
     // get Month
     const months = [
         '1', '2', '3', '4',
@@ -57,7 +62,7 @@ function GetDates() {
 
             // hien thi kiem tra ham thoi gian va ngay thay doi 
             // console.log(date)
-        }, 5000) 
+        }, loopTimes) 
 
         // Cleanup the interval when the component is unmounted
         return () => clearInterval(intervalId);
@@ -69,9 +74,9 @@ function GetDates() {
     // run index functions
     return (
         <div className="get-date inline">
-            <span className="showDay"> Day: {_day} </span> <br />
-            <span className="showMonth"> Month: {_month} </span> <br />
-            <span className="showYear"> Year: {_year} </span> <br />
+            <span className="showDay"> {_day} </span> -
+            <span className="showMonth"> {_month} </span> -
+            <span className="showYear"> {_year} </span> 
         </div>
     );
 }

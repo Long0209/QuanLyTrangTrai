@@ -21,7 +21,7 @@ const data = {
     ],
 };
 
-const options = {
+const config = {
     scales: {
         y: {
             beginAtZero: true,
@@ -35,7 +35,7 @@ function ChartTest () {
     return (
         <div>
             <h2>Bar Chart Example</h2>
-            <Bar data={data} options={options} />
+            <Bar data={data} options={config} />
         </div>
     );
 };

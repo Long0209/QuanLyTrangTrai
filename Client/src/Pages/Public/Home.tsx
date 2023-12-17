@@ -10,12 +10,12 @@ function Home() {
             <div className="text-xl ">
                 <span className="">Nghiên cứu ứng dụng công nghệ IoT trong đo lường, giám sát điều khiển nuôi trồng nấm tại Đắk Lắk</span>
             </div>
-            <center className=" w-full mb-1 border-b-2">
-                <img className="" src="./public/fdsdsd.png" alt="" />
-            </center>
+            <hr />
             <div className="bg-black w-3/5 ">
-
             </div>
+            <center className=" w-full mb-1 border-b-2">
+                <img className=" w-10/12" src="./public/sodo.png" alt="" />
+            </center>
             <center >
                 <div className="p-2 inline-grid gap-5 grid-cols-2 w-4/5 aspect-[17/1] " >
                     <div className=" border px-4 py-2 text-2xl bg-orange-400 text-center  ">
@@ -42,7 +42,7 @@ function Home() {
                     </div>
                 </div>
             </center>
-            <center>
+            <div>
                 <div>
                     <p>Trại Nấm ứng dụng IoT (Internet of Things)</p>
                 </div>
@@ -76,7 +76,7 @@ function Home() {
                     Chú trọng khả năng kiểm soát rủi ro, dịch bệnh, đảm bảo năng suất và chất lượng cho trại nấm, không hoặc ít phụ thuộc vào thời tiết.
                     </li>
                 </div>
-            </center>
+            </div>
         </>
     )
 }

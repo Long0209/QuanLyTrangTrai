@@ -13,6 +13,9 @@ import { FcComboChart } from "react-icons/fc";
 import icons_1 from "@/assets/Images/icons_12.jpg";
 import icons_2 from "@/assets/react.svg";
 
+// 
+import { GetTimes, GetDates } from "@/Components/Time/ShowDateTime";
+
 // links-List_Items
 // const LinkListAdmin = [
 //     {name:"Trang_1", href:"#", role:"menuitem"},
@@ -23,12 +26,31 @@ import icons_2 from "@/assets/react.svg";
 
 // Dashboard-Items
 const DashboardItems = [
-    {name:"Trang Chủ", href:"home", icons:GoContainer  },
+    {name:"Trang Chủ", href:"/admin", icons:GoContainer  },
     {name:"Nhà Trồng", href:"home_1", icons:TiTree },
     {name:"Thống Kê Chi Tiết", href:"home_2", icons:FcComboChart },
     {name:"Cài Đặt", href:"Setting", icons:CiSettings },
     {name:"Thoát", href:"Out", icons:FaOutdent}
 ]
+
+// hien thi thanh phan thoi gian
+function Date_Time() {
+    
+    return(
+        <>
+            <div className="flex justify-around select-none text-sm">
+                <span className="text-red-500">
+                    <GetDates/>
+                </span>
+                <p className="mx-1"></p>
+                <span className="text-purple-500">
+                    <GetTimes/>
+                </span>
+            </div>
+        </>
+
+    )
+}
 
 // thanh tiêu đề, thanh phía trên
 function NavBar_Top() {
@@ -65,9 +87,9 @@ function NavBar_Top() {
                             </svg>
                         </button>
 
-                        {/* link items change icons and link become your own  */}
+                        {/* links items change icons and link become your own  */}
                         <a href="#" 
-                            className="flex ms-2 md:me-24"
+                            className="flex ms-2 md:me-24 "
                         >
                             {/* images logos */}
                             <img src={icons_2} 
@@ -80,8 +102,14 @@ function NavBar_Top() {
                         </a>
                     </div>
                     
-                    {/* default-user */}
-                    <div className="flex items-center">
+                    {/* default-user icons */}
+                    <div className="flex items-center icons-user">
+
+                        {/* show date time */}
+                        <div className="date-time">
+                            <Date_Time/>
+                        </div>
+                        {/* icons user */}
                         <div className="flex items-center ms-3">
                             <div>
                                 <div  className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" 
@@ -295,7 +323,9 @@ export default function MasterAdminLayout() {
         <>
             <NavBar_Top/>
             <Sibar_Layout/>
-            <Content_Main/>
+            <div className="container-none">
+                <Content_Main/>
+            </div>
         </>
     )
 }
