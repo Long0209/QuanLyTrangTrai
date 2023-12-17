@@ -1,39 +1,48 @@
 
 // 
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
+
+// improt fuctions get date time 
+// import { GetTimes, GetDates } from "@/Components/Time/ShowDateTime";
+
+import ContainerFrame from "../Components/Frames/ContainerFrame";
+import ChartLineDouble from "@/Components/Chart/ChartLineDouble";
+
 
 // tao fun son loading dong ho
 function HomeAdmin() {
-    const [currentTime, setCurrentTime] = useState(new Date());
 
-    
-    useEffect( () => {
-        const intervalId = setInterval( () => { 
-            setCurrentTime( new Date() )
-
-        }, 1000) 
-
-        // Cleanup the interval when the component is unmounted
-        return () => clearInterval(intervalId);
-
-    }, [])
-
-    // Empty dependency array to run the effect only once on mount
-    const formattedTime = currentTime.toLocaleTimeString();
-
-    const xday = currentTime.getDay().toString();
-    const xmon = currentTime.getMonth().toLocaleString();
-
-    // run index functions
     return (
         <>
-            Admin - Home - Time:{formattedTime}
-            <br />
-            day - {xday}
-            <br />
-            mon - {xmon}
+            <span> home admin </span>
+            <div className="border border-stone-100 shadow-neutral-200 shadow-lg w-full flex justify-around py-4 px-auto gap-x-1 ">
+                {/* khung 1 */}
+                <div className="frame-items ">
+                    <ContainerFrame/>
+                </div>
+
+                {/* khung 2 */}
+                <div className="frame-items">
+                    <ContainerFrame/>
+                </div>
+
+                {/* khung 3 */}
+                <div className="frame-items">
+                    <ContainerFrame/>
+                </div>
+
+                {/* khung 4 */}
+                <div className="frame-items">
+                    <ContainerFrame/>
+                </div>
+            </div>
+
+            {/* chart */}
+            <div className="">
+                <ChartLineDouble/>
+            </div>
         </>
-    );
+    )
 }
 
 

@@ -42,9 +42,9 @@ function Router() {
                 {/* Admin */}
                 {/* Router Admin */}
                 <Route path='Admin' element={ <MasterAdminLayout/> }>
-                    <Route index path="home" element={ <HomeAdmin/> }/>
-                    <Route index path="home_1" element={ <Home_1/> }/>
-                    <Route index path="home_2" element={ <Home_2/> }/>
+                    <Route index element={ <HomeAdmin/> }/>
+                    <Route path="home_1" element={ <Home_1/> }/>
+                    <Route path="home_2" element={ <Home_2/> }/>
                     {/* <Route index path="home_2" element={ <Home_2/> }/> */}
                     {/* <Route index path="home" element={ <Admin/> }/> */}
                     {/* 
