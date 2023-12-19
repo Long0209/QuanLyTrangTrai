@@ -3,7 +3,7 @@ import {Routes, Route } from "react-router-dom";
 
 // Nạp Các Thành Phần con 
 // Thành Phần Tĩnh
-import {MasterDefaultNavbar, NoPages, ChartTest } from "@/Components";
+import { MasterDefaultNavbar, NoPages, ChartTest, Login } from "@/Components";
 
 // Thành Phần Động
 import { Home, News, Support } from "@/Pages/Public";
@@ -16,6 +16,7 @@ import { Home, News, Support } from "@/Pages/Public";
 
 // @ts-ignore
 import { MasterAdminLayout, } from "@private/Admin/Components";
+
 // @ts-ignore
 import { HomeAdmin, Home_2, Home_1 } from "@private/Admin/View";
 
@@ -28,18 +29,21 @@ function Router() {
 
     return (
         <div className="wrap-content">
-            <Routes>
-                <Route path="/" element={<MasterDefaultNavbar/>} >
-                    <Route index element={<Home/>} />
-                    <Route path="news" element={<News/>} />
-                    <Route path="support" element={<Support/>} />
-                    <Route path="infomations" element={<ChartTest/>} />
+            <Routes>    
+                {/* Router Default */}
+                <Route path="/" element={ <MasterDefaultNavbar/> }>
+                    <Route index element={ <Home/>} />
+                    <Route path="news" element={ <News/> } />
+                    <Route path="support" element={ <Support/> } />
+                    <Route path="infomations" element={ <ChartTest/> } />
     
                     {/* Không tìm Thấy Trang Theo URL( / ) */}
                     <Route path="*" element={<NoPages/>} />
                 </Route>
 
-                {/* Admin */}
+                {/* Router Login */}
+                <Route path="Login" element={ <Login/> } />
+
                 {/* Router Admin */}
                 <Route path='Admin' element={ <MasterAdminLayout/> }>
                     <Route index element={ <HomeAdmin/> }/>
@@ -59,7 +63,7 @@ function Router() {
                 </Route>
     
                 {/* Không tìm Thấy Trang Theo URL( Group ) */}
-                <Route path="*" element={<NoPages/>} />
+                <Route path="*" element={ <NoPages/> } />
             </Routes>
         </div>
     )

@@ -43,12 +43,12 @@ export default function Login() {
                                 </div>
                                 <a href="#" className="text-sm font-medium hover:underline ">htmlForgot password?</a>
                             </div>
-                            <button type="submit" className="w-full transition ease-in-out delay-50 text-gray-600 hover:bg-blue-500 hover:text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-centen tran">
+                            <button type="submit" className="w-full transition ease-in-out delay-50 text-gray-600 hover:bg-blue-500 hover:text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center border-2 border-zinc-100">
                                 Sign in
                             </button>
                             <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                                 Don’t have an account yet? 
-                                <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500 hover:decoration-solid hover:text-blue-500 ">Sign up</a>
+                                <a href="#" className="font-medium text-blue-600 hover:underline dark:text-blue-600 500 hover:decoration-solid hover:text-blue-500 ">Sign up</a>
                             </p>
                         </form>
                     </div>

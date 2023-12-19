@@ -13,4 +13,5 @@ export {default as Dialog} from "./DialogModels/Dialog.tsx";
 // 4: Tinh Chỉnh tùy Biến Nút Cho trang 
 export {default as Button} from "./Buttons/Button.tsx";
 
-// 5:
+// 5: Login
+export { default as Login } from "./Submit/Login.tsx";
