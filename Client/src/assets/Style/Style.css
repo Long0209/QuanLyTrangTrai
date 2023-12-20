@@ -1,0 +1,60 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.nav-menu > li > .active{
+    color: white;
+
+}
+
+/* custorm text auto run */
+.marquee-container-45s {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee-animation 45s linear infinite;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding: 10px; /* Optional: Add padding for better visibility */
+}
+
+@keyframes marquee-animation {
+    0% { transform: translateX(100%); }
+
+    100% { transform: translateX(-100%); }
+
+}
+/* custorm text auto run */
+
+/* scrollbat-body */
+
+
+
+::-webkit-scrollbar{
+    width: 2px;
+    overflow-y: auto;
+    border-radius: 50px;
+
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 120px;
+    background: rgba(225, 225, 225, 0.607);
+
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(180deg, rgb(72, 145, 181), rgb(105, 103, 173), rgb(83, 198, 140));
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 120px;
+
+}
+
+
+
+
