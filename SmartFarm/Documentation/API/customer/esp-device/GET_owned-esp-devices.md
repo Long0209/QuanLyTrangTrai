@@ -2,7 +2,7 @@
 
 Get list of owned esp devices by current logged in user.
 
-**URL** : `/api/v1/customer/espdevice/owned-esp-devices`
+**URL** : `/api/v1/customer/esp-device/owned-esp-devices`
 
 **Method** : `GET`
 

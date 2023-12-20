@@ -11,4 +11,4 @@
 
 #### Esp device 
 - [GetOwnedEspDevices](customer/esp-device/GET_owned-esp-devices.md) : `GET /api/v1/customer/esp-device/owned-esp-devices`
-- [GetEspData](customer/esp-device/GET_esp-data.md) : `GET /api/v1/customer/espdevice/esp-data`
+- [GetEspData](customer/esp-device/GET_esp-data.md) : `GET /api/v1/customer/esp-device/esp-data`

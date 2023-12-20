@@ -2,7 +2,7 @@
 
 Get data of specific esp devices.
 
-**URL** : `/api/v1/customer/espdevice/esp-data`
+**URL** : `/api/v1/customer/esp-device/esp-data`
 
 **Method** : `GET`
 
@@ -15,7 +15,7 @@ Get data of specific esp devices.
 **Example request**
 
 ```http
-GET http://localhost:5048/api/v1/customer/espdevice/esp-data?deviceId=1&resultSize=200
+GET http://localhost:5048/api/v1/customer/espd-evice/esp-data?deviceId=1&resultSize=200
 ```
 
 ## Success Response

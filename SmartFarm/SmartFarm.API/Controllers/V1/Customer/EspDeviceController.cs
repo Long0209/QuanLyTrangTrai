@@ -9,7 +9,7 @@ namespace SmartFarm.API.Controllers.V1.Customer;
 
 [Authorize]
 [ApiController]
-[Route("api/v1/customer/espdevice")]
+[Route("api/v1/customer/esp-device")]
 public class EspDeviceController : ControllerBase{
     private readonly SmartFarmDbContext _dbContext;
     public EspDeviceController(
