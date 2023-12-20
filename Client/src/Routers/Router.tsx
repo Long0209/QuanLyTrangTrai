@@ -42,10 +42,10 @@ function Router() {
                 </Route>
 
                 {/* Router Login */}
-                <Route path="Login" element={ <Login/> } />
+                <Route path="/Login" element={ <Login/> } />
 
                 {/* Router Admin */}
-                <Route path='Admin' element={ <MasterAdminLayout/> }>
+                <Route path='/Admin' element={ <MasterAdminLayout/> }>
                     <Route index element={ <HomeAdmin/> }/>
                     <Route path="home_1" element={ <Home_1/> }/>
                     <Route path="home_2" element={ <Home_2/> }/>

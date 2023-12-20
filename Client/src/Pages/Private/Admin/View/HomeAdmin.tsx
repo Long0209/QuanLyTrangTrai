@@ -8,6 +8,10 @@
 import ContainerFrame from "../Components/Frames/ContainerFrame";
 import ChartLineDouble from "@/Components/Chart/ChartLineDouble";
 
+// api
+// import { AuthLogin} from "@/Service/APi";
+// import { METHODS } from "http";
+
 
 // tao fun son loading dong ho
 function HomeAdmin() {
@@ -45,11 +49,14 @@ function HomeAdmin() {
     )
 }
 
-
+// 
 function Home_1() {
+
     return (
         <>
             Admin Home -1 
+            {/* <AuthLogin/> */}
+
         </>
     );
 }
@@ -64,3 +71,4 @@ function Home_2() {
 }
 
 export {HomeAdmin, Home_1, Home_2}
+
