@@ -1,3 +1,5 @@
+using System.Security.Claims;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,12 +14,14 @@ namespace SmartFarm.API.Controllers.V1.Identity;
 public class UserController : ControllerBase {
     private readonly UserManager<User> _userManager;
     private readonly SignInManager<User> _signInManager;
-    
+    private readonly IMapper _mapper;
     public UserController(
         UserManager<User> userManager,
-        SignInManager<User> signInManager) {
+        SignInManager<User> signInManager,
+        IMapper mapper) {
             _userManager = userManager;
             _signInManager = signInManager;
+            _mapper = mapper;
     }
 
     /// <summary>
@@ -49,5 +53,13 @@ public class UserController : ControllerBase {
         }
 
         return BadRequest(ModelState);
+    }
+
+    [HttpGet]
+    [Route("user-info")]
+    public async Task<IActionResult> GetUserInformation(){
+        var user = await _userManager.GetUserAsync(User);
+        var responseObj = _mapper.Map<UserViewModel>(user);
+        return Ok(responseObj);
     }
 }
