@@ -6,7 +6,9 @@
 - [Login](identity/authentication/login.md) : `POST /api/v1/identity/auth/login`
 - [Logout](identity/authentication/log-out.md) : `POST /api/v1/identity/auth/log-out`
 - [Register](identity/authentication/register.md) : `POST /api/v1/identity/register`
-
+#### User
+- [UpdatePassword](identity/user/Patch_password.md) : `PATCH /api/v1/identity/user/password`
+- [GetUserInfo](identity/user/Get_user-infor.md) : `GET /api/v1/identity/user/user-info`
 ### Customer
 
 #### Esp device 
