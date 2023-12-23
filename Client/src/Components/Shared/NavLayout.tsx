@@ -1,24 +1,28 @@
-
+// It appears you've provided an empty import statement without specifying the library or module you want to import from. 
+// In order to assist you properly, you need to fill in the empty curly braces with the specific components, functions, or modules you intend to import.
+// Additionally, you should specify the library or module from which you are making the import.
 import { Link, NavLink } from "react-router-dom";
 import iconRe from '../../assets/react.svg';
 
-
-
-const itemLinks = [
+// An empty array is often used as a starting point for dynamically populating data in your application. 
+// You might later push or assign values to this array based on dynamic data, user input, or other sources.
+// items Nav Link
+const itemsNavLink = [
     {name: " Trang Chủ ", href:"/"},
     {name: " Tin Tức ", href:"news"},
     {name: " Giới Thiệu ", href:"infomations"},
     {name: " Hỗi Trợ ", href:"support"},
 ]
 
-const ItemUser = [
+// Items Drop User
+const itemsDropUser = [
     {name: "Đăng Xuất", href:"#"},
     {name: "Đăng Nhập", href:"#"},
     {name: "Thông Tin Chung", href:"Admin"},
 ]
 
-
-function UserDropItem() {
+//  Create the one Functions name UserItem in show fututes 
+function UserItem() {
     return (
         <>
             <button id="dropdownDefaultButton" 
@@ -36,7 +40,7 @@ function UserDropItem() {
             <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" >
                     {
-                        ItemUser.map(
+                        itemsDropUser.map(
                             (item, index) =>
                                 <li className="item-user" key={index}>
                                     <Link to={item.href}
@@ -53,13 +57,36 @@ function UserDropItem() {
     )
 }
 
-export default function NavItems() {
+// NavLinkItems
+function NavLinkItems (){
+
+    return (
+        <ul className="nav-menu flex flex-col font-medium p-4 md:p-0 mt-4 border bg-slate-700 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-slate-700 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            {
+                itemsNavLink.map( (link, index) => 
+                    <li key={index}> 
+                        <NavLink to={link.href}
+                            className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                        >
+                            {link.name}
+                        </NavLink>
+                    </li>
+                )
+            } 
+        </ul>
+    )
+}
+
+// file export
+export default function NavLayout() {
+
     return (
         <nav className="bg-slate-700 border-gray-200 dark:bg-gray-900 ">
                 <div className="max-w-screen flex flex-wrap items-center lg:justify-between mx-auto p-4">
                     
+                    {/* Nav Link Items We */}
                     <div className="left-items flex flex-wrap items-center">
-                        {/* icons logo link */}
+                        {/* Icons Website */}
                         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                             <img src={iconRe} className=" w-12" alt="Flowbite Logo" />
                             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
@@ -68,7 +95,7 @@ export default function NavItems() {
                             </span>
                         </Link>
 
-                        {/* repont buttom */}
+                        {/* Repont Buttom */}
                         <button data-collapse-toggle="navbar-dropdown" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                             aria-controls="navbar-dropdown" 
                             aria-expanded="false">
@@ -80,30 +107,18 @@ export default function NavItems() {
                             </svg>
                         </button>
 
-                        {/* class hiden items link */}
+                        {/* Class Hidden Items Link */}
                         <div className="hidden w-full md:block md:w-auto lg:ps-12" id="navbar-dropdown">
-                            <ul className="nav-menu flex flex-col font-medium p-4 md:p-0 mt-4 border bg-slate-700 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-slate-700 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                                {
-                                    itemLinks.map( (link, index) => 
-                                        <li key={index}> 
-                                            <NavLink to={link.href}
-                                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                            >
-                                                {link.name}
-                                            </NavLink>
-                                        </li>
-                                    )
-                                }
-                            </ul>
+                            <NavLinkItems/>
                         </div>
                     </div>
-                    {/* user Drop-items */}
+
+                    {/* User List Items */}
                     <div className="user dropdows-user-items ">
-                        <UserDropItem/>
+                        <UserItem/>
                     </div>
                 </div>
-                
-            </nav>
+        </nav>
     )
 }
 

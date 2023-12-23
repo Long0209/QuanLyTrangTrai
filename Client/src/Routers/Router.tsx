@@ -3,23 +3,20 @@ import {Routes, Route } from "react-router-dom";
 
 // Nạp Các Thành Phần con 
 // Thành Phần Tĩnh
-import {MasterDefaultNavbar, NoPages, ChartTest } from "@/Components";
+import { MasterDefaultNavbar, PageError, ChartTest, Login } from "@/Components";
 
 // Thành Phần Động
 import { Home, News, Support } from "@/Pages/Public";
 
 // import Layout Admin interface
-// import { Layout } from "private/"
 // câu lệnh bỏ qua lỗi không tìm thấy thành dù thành phần vẫn được nập vào và hiện thị 
-// @ts-ignore 
-// import Admin from "@private/Admin.tsx";
-
 // @ts-ignore
 import { MasterAdminLayout, } from "@private/Admin/Components";
 // @ts-ignore
 import { HomeAdmin, Home_2, Home_1 } from "@private/Admin/View";
 
 // Admin configuration
+
 // import css stype from
 import "@/assets/Style/Style.css"; 
 
@@ -28,20 +25,23 @@ function Router() {
 
     return (
         <div className="wrap-content">
-            <Routes>
-                <Route path="/" element={<MasterDefaultNavbar/>} >
-                    <Route index element={<Home/>} />
-                    <Route path="news" element={<News/>} />
-                    <Route path="support" element={<Support/>} />
-                    <Route path="infomations" element={<ChartTest/>} />
+            <Routes>    
+                {/* Router Default */}
+                <Route path="/" element={ <MasterDefaultNavbar/> }>
+                    <Route index element={ <Home/>} />
+                    <Route path="news" element={ <News/> } />
+                    <Route path="support" element={ <Support/> } />
+                    <Route path="infomations" element={ <ChartTest/> } />
     
                     {/* Không tìm Thấy Trang Theo URL( / ) */}
-                    <Route path="*" element={<NoPages/>} />
+                    <Route path="*" element={<PageError/>} />
                 </Route>
 
-                {/* Admin */}
+                {/* Router Login */}
+                <Route path="/Login" element={ <Login/> } />
+
                 {/* Router Admin */}
-                <Route path='Admin' element={ <MasterAdminLayout/> }>
+                <Route path='/Admin' element={ <MasterAdminLayout/> }>
                     <Route index element={ <HomeAdmin/> }/>
                     <Route path="home_1" element={ <Home_1/> }/>
                     <Route path="home_2" element={ <Home_2/> }/>
@@ -55,11 +55,11 @@ function Router() {
                     */}
 
                     {/* Page error */}
-                    <Route path='*' element={<NoPages/>}/>
+                    <Route path='*' element={<PageError/>}/>
                 </Route>
     
                 {/* Không tìm Thấy Trang Theo URL( Group ) */}
-                <Route path="*" element={<NoPages/>} />
+                <Route path="*" element={ <PageError/> } />
             </Routes>
         </div>
     )

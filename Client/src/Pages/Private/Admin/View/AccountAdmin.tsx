@@ -6,4 +6,4 @@ function AccountAdmin() {
     )
 }
 
-export default AccountAdmin;
+export{ AccountAdmin};
