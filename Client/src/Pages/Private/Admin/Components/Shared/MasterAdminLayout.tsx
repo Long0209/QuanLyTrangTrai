@@ -14,7 +14,7 @@ import icons_1 from "@/assets/Images/icons_12.jpg";
 import icons_2 from "@/assets/react.svg";
 
 // 
-import { GetTimes, GetDates } from "@/Components/Time/ShowDateTime";
+import { GetTimes, GetDates } from "@/Components/DateTime/GetDateTime";
 
 // links-List_Items
 // const LinkListAdmin = [
@@ -33,7 +33,7 @@ const DashboardItems = [
     {name:"Thoát", href:"Out", icons:FaOutdent}
 ]
 
-// hien thi thanh phan thoi gian
+// Hiện Thị Thành Phần Thời Gian
 function Date_Time() {
     
     return(
@@ -52,7 +52,7 @@ function Date_Time() {
     )
 }
 
-// thanh tiêu đề, thanh phía trên
+// Thanh tiêu đề, thanh phía trên
 function NavBar_Top() {
 
     return (
@@ -153,7 +153,7 @@ function NavBar_Top() {
     );
 }
 
-// tùy chọn thanh bên ( bên trái)
+// Tùy chọn thanh bên ( bên trái )
 function Sibar_Layout() {
 
     return (

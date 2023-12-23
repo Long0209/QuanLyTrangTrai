@@ -6,4 +6,4 @@ function FarmAdmin() {
     )
 }
 
-export default FarmAdmin;
+export { FarmAdmin };

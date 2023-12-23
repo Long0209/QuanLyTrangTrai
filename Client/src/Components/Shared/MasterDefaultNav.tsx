@@ -1,13 +1,13 @@
 
 import { Outlet } from "react-router-dom";
 // 
-import NavItems from "./NavItems.tsx";
+import NavLayout from "./NavLayout.tsx";
 
-function MasterDefaultNavbar() {
+function MasterDefaultNav() {
     return (
         <>
             <div className="NavBar-default sticky top-0 left-0 right-0 h-full z-50">
-                <NavItems/>
+                <NavLayout/>
             </div>
             <div className="Content-default container z-40">
                 <Outlet/>
@@ -16,4 +16,4 @@ function MasterDefaultNavbar() {
     )
 }
 
-export default MasterDefaultNavbar;
+export default MasterDefaultNav;

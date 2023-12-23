@@ -13,7 +13,7 @@ const data = {
         {
             label: 'Nhiet Do',
             data: label1,
-            borderWidth:"1",  // looix day ke mia no mien chay
+            borderWidth:"1",  // looix o day ke mia no mien chay
             borderColor: "rgb(229, 108, 108)",
             backgroundColor: "rgb(229, 108, 108)",
             tension: 0.3,
@@ -21,7 +21,7 @@ const data = {
         {
             label: 'Do Am',
             data: label2,
-            borderWidth:"1",  // looix day ke mia no mien chay
+            borderWidth:"1",  // looix 0 day ke mia no mien chay
             borderColor: "rgb(107, 231, 250)",
             backgroundColor: "rgb(107, 231, 250)",
             tension: 0.3

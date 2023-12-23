@@ -1,9 +1,10 @@
 
-import { CiTempHigh } from "react-icons/ci"; // icons nhiet do
-import { RiWaterPercentLine } from "react-icons/ri"; // icons do am
-import { TiWeatherWindy } from "react-icons/ti"; // icons gia 
-import { RiTreeFill } from "react-icons/ri"; //icons cay 
+import { CiTempHigh } from "react-icons/ci";            // icons nhiet do
+// import { RiWaterPercentLine } from "react-icons/ri";    // icons do am
+// import { TiWeatherWindy } from "react-icons/ti";        // icons gia 
+// import { RiTreeFill } from "react-icons/ri";            //icons cay 
 
+// Hiển thị 4 thành phần
 function ContainerFrame() {
     
     return (
