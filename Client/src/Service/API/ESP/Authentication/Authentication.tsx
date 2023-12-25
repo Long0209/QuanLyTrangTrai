@@ -1,22 +1,39 @@
-//  Nhập một thư viện bên ngoài { axios }
-import axios from "axios";
-
-// nhap Base Url Api service api esp
-const baseUrl = import.meta.env.URL_API_ESP;
+// Import the axios library Create an instance of axios with custom configurations
+import instance_Esp_Data_Axios from "../Config_Server_Esp";
 
 //[ POST ] Xác Thực Đăng Nhập Website API ;
-function loginAuthencation( userName: string, userPassword: string) {
-    // link API Login 
-    const loginApi = baseUrl + "api/Authentication/sign-in";
+async function loginAuthencation( userName: string, userPassword: string) {
+    // const Link Authentication account
+    const api_Login = "/Authentication/sign-in";
 
-    // tập hợp các giá trị thông tin cần gửi đi đến server API
-    const data = {  
+    // convert databse usernames and passwords
+    const post_Data = {
         emailOrUserName: userName,
         password: userPassword
     }
-    
-    // return call API response server;
-    return  axios.post(loginApi, data);
+
+    // const  response data from api;
+    const response_api = await instance_Esp_Data_Axios.post(api_Login, post_Data)
+
+    // return data res data api
+    return response_api;
 }
 
-export {loginAuthencation}
+// [ POST ] Đăng Xuất Tài Khoản Website API ;
+async function logoutAuthencation( userName: string, userPassword: string) {
+    // const Link Authentication account
+    const api_Logout = "/Authentication/sign-out";
+
+    // convert databse usernames and passwords
+    const post_Data = {
+        userName,
+        userPassword
+    }
+
+    // const  response data from api;
+    const response_api = await instance_Esp_Data_Axios.post(api_Logout, post_Data)
+
+    // return data res data api
+    return response_api.data;
+}
+export {loginAuthencation, logoutAuthencation}

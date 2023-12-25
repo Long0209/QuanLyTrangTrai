@@ -4,9 +4,12 @@
 
 // improt fuctions get date time 
 // import { GetTimes, GetDates } from "@/Components/Time/ShowDateTime";
+import React, { useEffect, useState } from "react";
+import axios, { AxiosError } from "axios";
 
 import ContainerFrame from "../Components/Frames/ContainerFrame";
 import ChartLineDouble from "@/Components/Chart/ChartLineDouble";
+
 
 // api
 // import { AuthLogin} from "@/Service/APi";
@@ -51,24 +54,68 @@ function HomeAdmin() {
 
 // 
 function Home_1() {
+    const fetchData = async () => {
 
+        // Your API endpoint
+        const apiUrl = 'http://localhost:5048/api/v1/identity/user/user-info';
+
+        console.log("render: ")
+
+        // Axios request configuration
+        const config = {
+            method: 'get', 
+            url: apiUrl,
+            withCredentials: true, // Enable sending and receiving cookies
+            headers: {
+                'Content-Type': 'application/json', // Adjust the content type based on your API requirements
+                
+            },
+            
+        };
+        try {
+            
+            //const response = await axios.get("http://localhost:5048/api/v1/customer/esp-device/esp-data?deviceId=1");
+            const response = await axios(config);
+            //console.log(response.data);
+            console.log(response.status);
+            console.log(response.statusText);
+            console.log(response.headers);
+            console.log(response.config);
+        } catch (err) {
+            // Handle error
+            console.log(err);
+        }
+    };
+    
+    fetchData();
+
+    return(
+    <>
+        <span>
+            Home_1
+        </span>
+        <p>
+            <strong>
+                {
+                    sessionStorage.getItem('session')
+                }
+            </strong>
+        </p>
+    </>
+    )
+}
+
+// 
+function Home_2(){
     return (
         <>
-            Admin Home -1 
-            {/* <AuthLogin/> */}
-
+            <span>Home_2</span>
         </>
-    );
+    )
 }
 
 
-function Home_2() {
-    return (
-        <>
-            Admin Home - 2
-        </>
-    );
-}
+
 
 export {HomeAdmin, Home_1, Home_2}
 
