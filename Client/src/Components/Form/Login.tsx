@@ -21,6 +21,7 @@ function LoginFrom(){
             console.error("Login false:....");
 
         } else{
+            sessionStorage.setItem('session', userName);
             navigate("/admin");
             console.error("Login successful:....");
         }

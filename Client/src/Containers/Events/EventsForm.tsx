@@ -10,6 +10,7 @@ async function EventLogin(userName: string, password: string) {
 
         // Assuming the login is successful, you can redirect to another page
         if (response.status === 200) {
+            sessionStorage.setItem('session', userName);
             return true; // Redirect to the dashboard page
             // console.error("Login successful:", response.data.message);
         } else {
