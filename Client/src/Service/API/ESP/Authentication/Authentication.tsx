@@ -20,20 +20,14 @@ async function loginAuthencation( userName: string, userPassword: string) {
 }
 
 // [ POST ] Đăng Xuất Tài Khoản Website API ;
-async function logoutAuthencation( userName: string, userPassword: string) {
+async function logoutAuthencation() {
     // const Link Authentication account
     const api_Logout = "/Authentication/sign-out";
 
-    // convert databse usernames and passwords
-    const post_Data = {
-        userName,
-        userPassword
-    }
-
     // const  response data from api;
-    const response_api = await instance_Esp_Data_Axios.post(api_Logout, post_Data)
+    const response_api = await instance_Esp_Data_Axios.post(api_Logout)
 
     // return data res data api
-    return response_api.data;
+    return response_api;
 }
 export {loginAuthencation, logoutAuthencation}
