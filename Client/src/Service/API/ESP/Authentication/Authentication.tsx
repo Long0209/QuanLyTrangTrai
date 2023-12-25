@@ -10,10 +10,10 @@ async function loginAuthencation( userName: string, userPassword: string) {
     const post_Data = {
         emailOrUserName: userName,
         password: userPassword
-    }
+    };
 
     // const  response data from api;
-    const response_api = await instance_Esp_Data_Axios.post(api_Login, post_Data)
+    const response_api = await instance_Esp_Data_Axios.post(api_Login, post_Data);
 
     // return data res data api
     return response_api;
