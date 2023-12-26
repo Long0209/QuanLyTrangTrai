@@ -8,10 +8,10 @@ const baseUrl = import.meta.env.VITE_URL_API_ESP_DATA;
 const instance_Esp_Data_Axios = axios.create({
     baseURL: baseUrl, // Set the base URL for all requests
     timeout: 1000, // Set the timeout for requests to 1000 milliseconds (1 second)
+    withCredentials: true, // Enable sending and receiving cookies
     headers: {
         'X-Custom-Header': "foobar",
-        'content-type': "application/json; charset=utf-8 "
-
+        'content-type': "application/json; charset=utf-8 ",
     } // Set custom headers for all requests
 });
 

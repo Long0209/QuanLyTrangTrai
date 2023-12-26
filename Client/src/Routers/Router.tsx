@@ -2,7 +2,7 @@
 import {Routes, Route } from "react-router-dom";
 
 // Nạp Các Thành Phần con 
-// Thành Phần Tĩnh
+// Thành Phần Tĩnh 
 import { MasterDefaultNavbar, PageError, ChartTest, Login } from "@/Components";
 
 // Thành Phần Động
@@ -13,7 +13,7 @@ import { Home, News, Support } from "@/Pages/Public";
 // @ts-ignore
 import { MasterAdminLayout, } from "@private/Admin/Components";
 // @ts-ignore
-import { HomeAdmin, Home_2, Home_1 } from "@private/Admin/View";
+import { HomeAdmin, Home_2, Home_1, ManageAdmin } from "@private/Admin/Pages";
 
 // Admin configuration
 
@@ -45,6 +45,7 @@ function Router() {
                     <Route index element={ <HomeAdmin/> }/>
                     <Route path="home_1" element={ <Home_1/> }/>
                     <Route path="home_2" element={ <Home_2/> }/>
+                    <Route path="manage" element={ <ManageAdmin/> }/>
                     {/* <Route index path="home_2" element={ <Home_2/> }/> */}
                     {/* <Route index path="home" element={ <Admin/> }/> */}
                     {/* 

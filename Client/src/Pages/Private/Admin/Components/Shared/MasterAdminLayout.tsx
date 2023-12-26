@@ -8,6 +8,7 @@ import { CiSettings } from "react-icons/ci";
 import { FaOutdent } from "react-icons/fa";
 import { GoContainer } from "react-icons/go";
 import { FcComboChart } from "react-icons/fc";
+import { FiActivity } from "react-icons/fi";
 
 // 
 import icons_1 from "@/assets/Images/icons_12.jpg";
@@ -28,8 +29,9 @@ import { GetTimes, GetDates } from "@/Components/DateTime/GetDateTime";
 const DashboardItems = [
     {name:"Trang Chủ", href:"/admin", icons:GoContainer  },
     {name:"Nhà Trồng", href:"home_1", icons:TiTree },
+    {name:"Quản Lý Thông tin", href:"manage", icons:FiActivity },
     {name:"Thống Kê Chi Tiết", href:"home_2", icons:FcComboChart },
-    {name:"Cài Đặt", href:"Setting", icons:CiSettings },
+    {name:"Cài Đặt", href:"setting", icons:CiSettings },
     {name:"Thoát", href:"Out", icons:FaOutdent}
 ]
 
@@ -317,7 +319,7 @@ function Content_Main () {
 }
 
 // Master Layout Administration
-export default function MasterAdminLayout() {
+function MasterAdminLayout() {
 
     return (
         <>
@@ -329,3 +331,5 @@ export default function MasterAdminLayout() {
         </>
     )
 }
+
+export default MasterAdminLayout;

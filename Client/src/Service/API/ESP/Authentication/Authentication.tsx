@@ -4,7 +4,7 @@ import instance_Esp_Data_Axios from "../Config_Server_Esp";
 //[ POST ] Xác Thực Đăng Nhập Website API ;
 async function loginAuthencation( userName: string, userPassword: string) {
     // const Link Authentication account
-    const api_Login = "/Authentication/sign-in";
+    const api_Login = "api/v1/identity/auth/login";
 
     // convert databse usernames and passwords
     const post_Data = {
@@ -22,7 +22,7 @@ async function loginAuthencation( userName: string, userPassword: string) {
 // [ POST ] Đăng Xuất Tài Khoản Website API ;
 async function logoutAuthencation() {
     // const Link Authentication account
-    const api_Logout = "/Authentication/sign-out";
+    const api_Logout = "api/v1/identity/auth/log-out";
 
     // const  response data from api;
     const response_api = await instance_Esp_Data_Axios.post(api_Logout)
