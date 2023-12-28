@@ -11,7 +11,7 @@ Get data of specific esp devices.
 **Query Parameters**
 - DeviceId (interger, required) : The ID of the ESP device for which data is to be retrieved
 - ResultSize (interger, optional): The number of results to retrieve (default is 200)
-
+  
 **Example request**
 
 ```http

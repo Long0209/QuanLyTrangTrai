@@ -12,15 +12,15 @@ function LoginFrom(){
     const [password, setPassword] = React.useState(String) || null;
     
     // su ly su kien dang nhap
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-        const login = EventLogin(userName, password) ;
+        const login = await EventLogin(userName, password) ;
         
-        if(!login){
+        if(!(login === true)){
             navigate("/login");
             console.error("Login false:....");
-
-        } else{
+            
+        } else {
             navigate("/admin");
             console.error("Login successful:....");
         }
