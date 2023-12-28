@@ -1,17 +1,17 @@
+import React from "react";
+import { get_esp_owned_devices } from "@/Service/API/ESP";
+
+// -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+// -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+import ContainerFrame from "@/Components/Frames/ContainerFrame";
+import ChartLineDouble from "@/Components/Chart/ChartLineDouble";
+
 // improt fuctions get date time 
 // import { GetTimes, GetDates } from "@/Components/Time/ShowDateTime";
 import { CiTempHigh } from "react-icons/ci";
 import { WiWindBeaufort0 } from "react-icons/wi"; // icons winds
 import { WiNightAltRainWind } from "react-icons/wi"; // icons lavi
 import { FcLandscape } from "react-icons/fc"; //icon night
-
-
-// -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
-// -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
-import ContainerFrame from "@/Components/Frames/ContainerFrame";
-import ChartLineDouble from "@/Components/Chart/ChartLineDouble";
-import React from "react";
-import { get_esp_owned_devices } from "@/Service/API/ESP";
 
 // Trang Chủ 
 // Chứ Manage_admín chứa thông tin sơ bộ về services của server như số người, số tài khoản dùng, nhà trồng đã đăng ký 
@@ -60,15 +60,7 @@ function Main_Content_Home() {
 
 // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-// chua co
-function Home_2(){
-    return (
-        <>
-            <span>Home_2</span>
-        </>
-    )
-}
 
 // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-export {Main_Content_Home, Home_2}
+export {Main_Content_Home}
 

@@ -33,6 +33,7 @@ async function logoutAuthencation() {
     return response_api;
 }
 
+
 logoutAuthencation.prototype = {
     userName: PropTypes.string.isRequired,
     userPassword: PropTypes.string.isRequired

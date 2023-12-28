@@ -22,8 +22,8 @@ import {
     Main_Content_Home,  
     Main_Content_Farm, 
     Main_Content_Admin,
-    Home_2, 
-    ManageAdmin
+    Main_Manage_Admin, 
+    Main_Detail_Admin
     // @ts-ignore
 } from "@private/Admin/Pages"; 
 
@@ -60,8 +60,8 @@ const PrivateRouter = () =>{
             <Route path='/Admin' element={ <MasterAdminLayout/> }>
                 <Route index element={ <Main_Content_Home/> }/>
                 <Route path="nha-trong" element={ <Main_Content_Farm/> }/>
-                <Route path="manage" element={ <Home_2/> }/>
-                <Route path="detail" element={ <ManageAdmin/> }/>
+                <Route path="manage" element={ <Main_Manage_Admin/> }/>
+                <Route path="detail" element={ <Main_Detail_Admin/> }/>
                 <Route path="setting" element={ <Main_Content_Admin/> }/>
                 {/* <Route index path="home_2" element={ <Home_2/> }/> */}
                 {/* <Route index path="home" element={ <Admin/> }/> */}
