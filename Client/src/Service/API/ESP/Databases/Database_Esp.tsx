@@ -43,4 +43,8 @@ async function get_esp_owned_devices(page_index: number, page_size: number) {
     return response;
 }
 
+async function get_esp_data (devices_Id: number , results_Size: number){
+    const api_get_esp_data = "api/v1/customer/esp-device/esp-data?deviceId=1&resultSize=200"
+}
+
 export {get_Farm_Esp_ALL, get_esp_owned_devices}

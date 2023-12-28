@@ -1,5 +1,5 @@
 // Nhập thư viện
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 
 // import use Icons-react
@@ -15,7 +15,12 @@ import icons_1 from "@/assets/Images/icons_12.jpg";
 import icons_2 from "@/assets/react.svg";
 
 // 
+import { EventLogout } from "@/Containers";
+// 
 import { GetTimes, GetDates } from "@/Components/DateTime/GetDateTime";
+import React from "react";
+
+// constr session web
 
 // links-List_Items
 // const LinkListAdmin = [
@@ -28,11 +33,11 @@ import { GetTimes, GetDates } from "@/Components/DateTime/GetDateTime";
 // Dashboard-Items
 const DashboardItems = [
     {name:"Trang Chủ", href:"/admin", icons:GoContainer  },
-    {name:"Nhà Trồng", href:"home_1", icons:TiTree },
+    {name:"Nhà Trồng", href:"nha-trong", icons:TiTree },
     {name:"Quản Lý Thông tin", href:"manage", icons:FiActivity },
-    {name:"Thống Kê Chi Tiết", href:"home_2", icons:FcComboChart },
+    {name:"Thống Kê Chi Tiết", href:"detail", icons:FcComboChart },
     {name:"Cài Đặt", href:"setting", icons:CiSettings },
-    {name:"Thoát", href:"Out", icons:FaOutdent}
+    // {name:"Thoát", href:"Out", icons:FaOutdent}
 ]
 
 // Hiện Thị Thành Phần Thời Gian
@@ -41,9 +46,6 @@ function Date_Time() {
     return(
         <>
             <div className="flex justify-around select-none text-sm">
-                <span className="text-red-500">
-                    <GetDates/>
-                </span>
                 <p className="mx-1"></p>
                 <span className="text-purple-500">
                     <GetTimes/>
@@ -54,12 +56,22 @@ function Date_Time() {
     )
 }
 
+// 
+
+function getNameSession () {
+    const session = sessionStorage.getItem('session');  
+    if(!session){
+        return <span> Chua Dang Nhap</span>
+    }
+    return session
+}
+
 // Thanh tiêu đề, thanh phía trên
 function NavBar_Top() {
-
+    
     return (
         // default
-        <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <nav className="fixed top-0 h-auto my-auto z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
             {/* container-top */}
             <div className="px-3 py-3 lg:px-5 lg:pl-3">
                 {/* conatiner-2-top */}
@@ -106,7 +118,11 @@ function NavBar_Top() {
                     
                     {/* default-user icons */}
                     <div className="flex items-center icons-user">
-
+                        <div className="session">
+                            {
+                                getNameSession()
+                            }
+                        </div>
                         {/* show date time */}
                         <div className="date-time">
                             <Date_Time/>
@@ -154,10 +170,25 @@ function NavBar_Top() {
         </nav>
     );
 }
+// recdirt router Logout
+
 
 // Tùy chọn thanh bên ( bên trái )
 function Sibar_Layout() {
+    let navigate = useNavigate()
 
+    const LogOut = ( e: any) => {
+        e.preventDefault();
+        
+        EventLogout();
+    
+        if(!EventLogout){
+            navigate("/admin")
+        } else{
+            navigate("/")
+            window.location.reload();
+        }
+    }
     return (
         // sibar Layout 
         <aside id="logo-sidebar" 
@@ -185,6 +216,14 @@ function Sibar_Layout() {
                             );
                         })
                     }
+                    <li className="flex first-letter: items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                        
+                    >
+                        <FaOutdent/>
+                        <button onClick={LogOut}>
+                            Thoát
+                        </button>
+                    </li>
                 </ul>
             </div>
         </aside>

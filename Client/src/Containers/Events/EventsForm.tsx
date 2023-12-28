@@ -1,4 +1,5 @@
-
+// 
+import PropTypes from "prop-types";
 import { loginAuthencation, logoutAuthencation } from "@/Service/API/ESP";
 
 
@@ -70,6 +71,12 @@ async function EventLogout() {
         // console.error("Login failed:", error);
         return false;
     }
+}
+
+EventLogin.prototype = {
+    userName: PropTypes.string.isRequired,
+    userPassword: PropTypes.string.isRequired
+    
 }
 
 export {EventLogin, EventLogout }//EventLogout

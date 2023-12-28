@@ -8,13 +8,22 @@ import { FcLandscape } from "react-icons/fc"; //icon night
 
 // -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 // -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
-import ContainerFrame from "../../../../../Components/Frames/ContainerFrame";
+import ContainerFrame from "@/Components/Frames/ContainerFrame";
 import ChartLineDouble from "@/Components/Chart/ChartLineDouble";
 import React from "react";
 import { get_esp_owned_devices } from "@/Service/API/ESP";
 
-// tao fun son loading dong ho
-function HomeAdmin() {
+// Trang Chủ 
+// Chứ Manage_admín chứa thông tin sơ bộ về services của server như số người, số tài khoản dùng, nhà trồng đã đăng ký 
+// Các chức năng cơ bản như thay đỏi thông tin nhà trồng, tài khoản, người dùng, thiết bị v.v..
+// trang hiện thi sơ bộ 
+// các thành phần nhỏ khác
+// hiển thị biêu đồ
+// hiển thị thông tin dưới dạng bảng
+// nhà trồng 
+// tài khoản 
+// 
+function Main_Content_Home() {
 
     return (
         <>
@@ -49,33 +58,9 @@ function HomeAdmin() {
     )
 }
 
-// 
-function Home_1() {
-    get_esp_owned_devices(1, 200)
-        .then( (responese) => {
-            console.log( 'responese>>', responese.data);
-        })
-        .catch ( (err) => {
-            console.log("err>>", err)
-        })
-
-    return(
-    <>
-        <span>
-            Home_1
-        </span>
-        <p>
-            <strong>
-                {
-                    sessionStorage.getItem('session')
-                }
-            </strong>
-        </p>
-    </>
-    )
-}
-
-// 
+// /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+// /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+// chua co
 function Home_2(){
     return (
         <>
@@ -84,8 +69,6 @@ function Home_2(){
     )
 }
 
-
-
-
-export {HomeAdmin, Home_1, Home_2}
+// /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+export {Main_Content_Home, Home_2}
 

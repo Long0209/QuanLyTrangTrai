@@ -1,5 +1,7 @@
 // Import the axios library Create an instance of axios with custom configurations
+import PropTypes from 'prop-types';
 import instance_Esp_Data_Axios from "../Config_Server_Esp";
+
 
 //[ POST ] Xác Thực Đăng Nhập Website API ;
 async function loginAuthencation( userName: string, userPassword: string) {
@@ -30,4 +32,11 @@ async function logoutAuthencation() {
     // return data res data api
     return response_api;
 }
+
+logoutAuthencation.prototype = {
+    userName: PropTypes.string.isRequired,
+    userPassword: PropTypes.string.isRequired
+    
+}
+
 export {loginAuthencation, logoutAuthencation}
