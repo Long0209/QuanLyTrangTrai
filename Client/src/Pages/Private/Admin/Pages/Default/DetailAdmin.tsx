@@ -1,5 +1,4 @@
 
-import React from 'react'
 
 function Main_Detail_Admin() {
     return (

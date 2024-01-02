@@ -8,8 +8,8 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@components': path.resolve(__dirname, 'src/components'),
-      '@private': path.resolve(__dirname, 'src/pages/private'),
-      '@chart': path.resolve(__dirname, 'src/chart')
+      '@chart': path.resolve(__dirname, 'src/chart'),
+      '@private': path.resolve(__dirname, 'src/pages/private')
       // Add more aliases as needed
     },
   },

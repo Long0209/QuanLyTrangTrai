@@ -5,7 +5,8 @@ import Router from './Routers/Router';
 import { BrowserRouter } from 'react-router-dom';
 
 // nạp file style css trong tailwind để sử dụng 
-    import "tailwindcss/tailwind.css";
+import "tailwindcss/tailwind.css";
+
 // Thực hiện kiểm tra giá trị thuộc tính truyền vào là không null
 // Đảm bảo giá trị truyền vào không null (!=null) 
 // 
@@ -15,7 +16,8 @@ import { BrowserRouter } from 'react-router-dom';
 // document.getElementById('yourElementId')!
     // The ! symbol at the end of the expression (document.getElementById('yourElementId')!.
     //  is the non-null assertion operator in TypeScript.
-    const root: HTMLElement | null = document.getElementById('root')!;
+const root: HTMLElement | null = document.getElementById('root')!;
+
 // Sau Khi Thực Hiện Xong 
 // 
 //  Thực hiện Render ui giao diện trong react Vite

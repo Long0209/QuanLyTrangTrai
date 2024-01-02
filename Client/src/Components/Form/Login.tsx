@@ -14,6 +14,7 @@ function LoginFrom(){
     // su ly su kien dang nhap
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
+        
         const login = await EventLogin(userName, password) ;
         
         if(!(login === true)){

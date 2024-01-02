@@ -1,5 +1,4 @@
-import { get_esp_owned_devices } from "@/Service/API/ESP";
-
+import React from "react";
 
 const data_title = [
     { title: 'Product name'},
@@ -9,7 +8,7 @@ const data_title = [
     { title: 'edit'}
 ]
 
-const data = [
+const data  = [
     { Product_name: 'Apple MacBook Pro 17"', Color: 'Silver', Category: 'Laptop', Price: '$2999'},
     { Product_name: 'Microsoft Surface Pro', Color: 'White', Category: 'Laptop PC', Price: '$1999'},
     { Product_name: 'Magic Mouse 2', Color: 'Black', Category: 'Accessories', Price: '$99'},
@@ -18,11 +17,21 @@ const data = [
     { Product_name: ' Mouse', Color: 'Black', Category: 'Access', Price: '$99'},
 ]
 
-// interface TableComponentProps {
-//     data: any[]; // Replace 'any' with the actual type of data you expect in the array
-// }
-//  export components from table 
-function TableComponent ( ) {
+
+function Main_Content_Farm() {
+
+    return(
+    <>
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <TableComponent data={data} data_title={data_title}/>
+            </table>
+        </div>
+    </>
+    )
+}
+
+function TableComponent ( props: any) {
 
     return(
         <>
@@ -30,9 +39,9 @@ function TableComponent ( ) {
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     {
-                        data_title.map((item, index) => (
+                        props.data_title.map((item: any, index: React.Key) => (
                             <th key={index}
-                                scope="col" 
+                                scope="col"     
                                 className="px-6 py-3"
                             >
                                 {item.title}
@@ -44,7 +53,7 @@ function TableComponent ( ) {
             {/* body Table */}
             <tbody>
                 {
-                    data.map( (item, index) => ( 
+                    props.data.map( (item: any, index: React.Key) => ( 
                         <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {item.Product_name}
@@ -66,32 +75,8 @@ function TableComponent ( ) {
                 }
             </tbody>
         </>
-    )
-    
+    ) 
 }
 
-// export default components
-function Main_Content_Farm() {
-
-    return(
-    <>
-        <span>
-            Home_1
-        </span>
-        <p>
-            <strong>
-                {
-                    sessionStorage.getItem('session')
-                }
-            </strong>
-        </p>
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <TableComponent/>
-            </table>
-        </div>
-    </>
-    )
-}
 
 export {Main_Content_Farm}
