@@ -34,7 +34,9 @@ async function logoutAuthencation() {
 }
 
 
-logoutAuthencation.prototype = {
+// [ POST ]
+
+loginAuthencation.prototype = {
     userName: PropTypes.string.isRequired,
     userPassword: PropTypes.string.isRequired
     

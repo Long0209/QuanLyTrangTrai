@@ -21,9 +21,9 @@ async function EventLogin(userName: string, password: string) {
 
         } else {
             // Handle unsuccessful login, show an error message, etc.
-
             // console.log(false); // render view true or flase
             // console.error("Login else:");
+            console.error("Error:", response.data.message);
             
             return false;
         }

@@ -1,23 +1,15 @@
-// Nạp Các Framework Routes và React
-import React from "react";
-import {Routes, Route, useNavigate } from "react-router-dom";
+import {Routes, Route } from "react-router-dom";
 
-// Nạp Các Thành Phần con 
-// Thành Phần Tĩnh 
 import { MasterDefaultNavbar, PageError, ChartTest, Login } from "@/Components";
-
-// Thành Phần Động
 import { Home, News, Support } from "@/Pages/Public";
 
-// import Layout Admin interface
-// câu lệnh bỏ qua lỗi không tìm thấy thành dù thành phần vẫn được nập vào và hiện thị 
-// /\\/\/\//\/\/\\/\/\//\\/\/\//\/\/\\/\/\/
+// Components-Admin
 import { 
     MasterAdminLayout, 
     // @ts-ignore 
 } from "@private/Admin/Components";
 
-// /\\/\/\//\/\/\\/\/\//\\/\/\//\/\/\\/\/\/
+// Pages-Admin
 import {  
     Main_Content_Home,  
     Main_Content_Farm, 
@@ -27,11 +19,21 @@ import {
     // @ts-ignore
 } from "@private/Admin/Pages"; 
 
-// /\\/\/\//\/\/\\/\/\//\\/\/\//\/\/\\/\/\/
-// import css stype from
+// Components-User
+import {  
+    SharedLayout_User
+    // @ts-ignore
+} from "@private/User/Components"; 
+
+// Pages-User
+import {  
+    HomeUser
+    // @ts-ignore
+} from "@private/User/Pages"; 
+
+// File-Style
 import "@/assets/Style/Style.css"; 
 
-// /\\/\/\//\/\/\\/\/\//\\/\/\//\/\/\\/\/\/
 const PublicRouter = () =>{
 
     return(
@@ -42,10 +44,16 @@ const PublicRouter = () =>{
                 <Route path="/news" element={ <News/> } />
                 <Route path="/support" element={ <Support/> } />
                 <Route path="/infomations" element={ <ChartTest/> } />
+
+                {/* user-login */}
+                <Route path="/Nguoi-Dung" element={ <SharedLayout_User/> }>
+                    <Route index element={ <HomeUser/> }/>
+                </Route>
+                
+
             </Route>
-            {/* login router */}
+
             <Route path="/login" element={ <Login/> } />
-            {/* Không tìm Thấy Trang Theo URL( / ) */}
             <Route path="/*" element={<PageError/>} />
         </Routes>
     )
@@ -81,7 +89,6 @@ const PrivateRouter = () =>{
 
 // Thực Hiện Trả Về Kết Quả
 function Router() {
-    let navigate = useNavigate();
     const session = sessionStorage.getItem('session');
 
     return (

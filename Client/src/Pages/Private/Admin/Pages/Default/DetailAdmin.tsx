@@ -2,8 +2,8 @@
 
 function Main_Detail_Admin() {
     return (
-        <div>DetailAdmin</div>
-    )
-}
+        <div className="text-center text-violet-500 uppercase "> thong ke chi tiet </div>
+    );
+};
 
-export  {Main_Detail_Admin}
+export  { Main_Detail_Admin };

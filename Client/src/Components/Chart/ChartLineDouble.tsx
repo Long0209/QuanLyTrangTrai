@@ -61,7 +61,6 @@ function ChartLineDouble() {
 
     return (
         <div>
-            ChartLineDouble
             <Line data={data} options={config} />
         </div>
     )
