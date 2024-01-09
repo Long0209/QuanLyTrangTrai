@@ -12,7 +12,7 @@ function SharedLayout_User() {
                 <div className='Dashboard_user fixed left-0'>
                     <Dashboard_user/> 
                 </div>
-                <div className="Dashboard_user_content mt-1 sm:ml-64 ">
+                <div className="Dashboard_user_content mt-1 sm:ml-64 pt-2 ps-3 ">
                     <Outlet/>
                 </div>
             </div>

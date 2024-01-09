@@ -68,4 +68,5 @@ const data_farm_12 = [
     {id:"11",temp:"300",hum:"561",probe:"0",charge:"859",device:"1",TimeStamp:"2023-05-07 13:17:46"}
 ]
 
+
 export {table_data, table_data_title, data_user_info, data_farm_12}

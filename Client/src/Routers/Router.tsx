@@ -27,7 +27,9 @@ import {
 
 // Pages-User
 import {  
-    HomeUser
+    HomeUser,
+    Farm_user,
+    Account_user
     // @ts-ignore
 } from "@private/User/Pages"; 
 
@@ -48,6 +50,8 @@ const PublicRouter = () =>{
                 {/* user-login */}
                 <Route path="/Nguoi-Dung" element={ <SharedLayout_User/> }>
                     <Route index element={ <HomeUser/> }/>
+                    <Route path="Nha-Trong" element={ <Farm_user/> }/>
+                    <Route path="Tai-Khoan" element={ <Account_user/> }/>
                 </Route>
                 
 
